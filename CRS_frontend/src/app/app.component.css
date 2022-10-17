@@ -15,6 +15,16 @@ a:hover {
 a:active {
   background-color: black;
 }
-.container{
+.container {
   background-image: url(./images/blueimage.jpg);
+}
+
+body {
+  background-image: linear-gradient(270deg, #ddc7dd 0%, #c6ecef 100%);
+  height: auto;
+  width: auto;
+  transition: all 400ms ease-out;
+  box-shadow: 0 0 8px 3px #e60c8b;
+  border: 2px solid #ddc7f7;
+  background-color: transparent;
 }

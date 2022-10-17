@@ -1,4 +1,4 @@
-<div class="row" style="justify-content: center; background-color: #ffffff">
+<div class="row" style="justify-content: center; background-color: #3a39a09d">
   <div style="padding: 1rem">
     <button type="submit" class="btn btn-primary" (click)="viewManagers()">
       <b><i>Managers</i> </b>
@@ -29,20 +29,12 @@
     </div> -->
 </div>
 
-<div
-  *ngIf="anyButtonClicked"
-  class="container"
-  style="background-color: #ffffff"
->
+<div *ngIf="anyButtonClicked" class="container" style="background-color: #3a39a09d">
   <button (click)="closeAll()" class="btn btn-warning">Close All</button><br />
 </div>
 <!-- ------------------------------------Managers------------------------------------ -->
 <!-- view Managers -->
-<div
-  *ngIf="viewManagersStatus"
-  class="container"
-  style="background-color: #ffffff"
->
+<div *ngIf="viewManagersStatus" class="container" style="background-color: #3a39a09d">
   <br />
   <div class="col-lg-7 mx-auto">
     <h4>Managers</h4>
@@ -78,13 +70,8 @@
           <form (ngSubmit)="newManagerUpdates()">
             <h4>Update Manager Pincode</h4>
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="managerPincode"
-                [(ngModel)]="managerUpdating.managerPincode"
-                placeholder="Enter new pincode"
-              />
+              <input type="text" class="form-control" name="managerPincode" [(ngModel)]="managerUpdating.managerPincode"
+                placeholder="Enter new pincode" />
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
           </form>
@@ -96,11 +83,7 @@
 
 <!-- ------------------------------------Engineers------------------------------------ -->
 <!-- View Engineers -->
-<div
-  *ngIf="viewEngineersStatus"
-  class="container"
-  style="background-color: #ffffff"
->
+<div *ngIf="viewEngineersStatus" class="container" style="background-color: #3a39a09d">
   <br />
   <div class="col-lg-7 mx-auto">
     <h4>Engineers</h4>
@@ -129,11 +112,7 @@
 </div>
 <!-- ------------------------------------Customers------------------------------------ -->
 <!-- View Customers -->
-<div
-  *ngIf="viewCustomersStatus"
-  class="container"
-  style="background-color: #ffffff"
->
+<div *ngIf="viewCustomersStatus" class="container" style="background-color: #3a39a09d">
   <br />
   <div class="col-lg-7 mx-auto">
     <h4>Customers</h4>
@@ -173,13 +152,8 @@
           <form (ngSubmit)="newCustomerUpdates()">
             <h4>Update Customer Pincode</h4>
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="customerPincode"
-                [(ngModel)]="customerUpdating.customerPincode"
-                placeholder="Enter new pincode"
-              />
+              <input type="text" class="form-control" name="customerPincode"
+                [(ngModel)]="customerUpdating.customerPincode" placeholder="Enter new pincode" />
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
           </form>
@@ -190,11 +164,7 @@
 </div>
 <!-- ------------------------------------Complaints------------------------------------ -->
 <!-- View Complaints -->
-<div
-  *ngIf="viewComplaintsStatus"
-  class="container"
-  style="background-color: #ffffff"
->
+<div *ngIf="viewComplaintsStatus" class="container" style="background-color: #3a39a09d">
   <br />
   <div class="col-lg-7 mx-auto">
     <h4>Complaints</h4>
@@ -235,43 +205,23 @@
           <form (ngSubmit)="newComplaintUpdates()">
             <h4>Update Complaint Pincode</h4>
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="customerEmail"
-                [(ngModel)]="complaintUpdating.customerEmail"
-                placeholder="Enter email"
-              />
+              <input type="text" class="form-control" name="customerEmail" [(ngModel)]="complaintUpdating.customerEmail"
+                placeholder="Enter email" />
             </div>
 
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="pincode"
-                [(ngModel)]="complaintUpdating.pincode"
-                placeholder="Enter pincode"
-              />
+              <input type="text" class="form-control" name="pincode" [(ngModel)]="complaintUpdating.pincode"
+                placeholder="Enter pincode" />
             </div>
 
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="complaint"
-                [(ngModel)]="complaintUpdating.complaint"
-                placeholder="Enter complaint"
-              />
+              <input type="text" class="form-control" name="complaint" [(ngModel)]="complaintUpdating.complaint"
+                placeholder="Enter complaint" />
             </div>
 
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="status"
-                [(ngModel)]="complaintUpdating.status"
-                placeholder="Enter status"
-              />
+              <input type="text" class="form-control" name="status" [(ngModel)]="complaintUpdating.status"
+                placeholder="Enter status" />
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
           </form>
@@ -282,11 +232,7 @@
 </div>
 <!-- ------------------------------------Feedbacks------------------------------------ -->
 <!-- view Feedbacks -->
-<div
-  *ngIf="viewFeedbacksStatus"
-  class="container"
-  style="background-color: #ffffff"
->
+<div *ngIf="viewFeedbacksStatus" class="container" style="background-color: #3a39a09d">
   <br />
   <div class="col-lg-7 mx-auto">
     <h4>Feedbacks</h4>
@@ -325,33 +271,18 @@
         <div>
           <form (ngSubmit)="newFeedbackUpdates()">
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="ticketId"
-                [(ngModel)]="feedbackUpdating.ticketId"
-                placeholder="Enter ticked Id"
-              />
+              <input type="text" class="form-control" name="ticketId" [(ngModel)]="feedbackUpdating.ticketId"
+                placeholder="Enter ticked Id" />
             </div>
 
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="customerEmail"
-                [(ngModel)]="feedbackUpdating.customerEmail"
-                placeholder="Enter email"
-              />
+              <input type="text" class="form-control" name="customerEmail" [(ngModel)]="feedbackUpdating.customerEmail"
+                placeholder="Enter email" />
             </div>
 
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="feedback"
-                [(ngModel)]="feedbackUpdating.feedback"
-                placeholder="Enter feedback"
-              />
+              <input type="text" class="form-control" name="feedback" [(ngModel)]="feedbackUpdating.feedback"
+                placeholder="Enter feedback" />
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg">Submit</button>

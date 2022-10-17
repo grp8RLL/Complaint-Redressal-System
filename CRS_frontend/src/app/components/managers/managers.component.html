@@ -82,7 +82,7 @@
 
 <div *ngIf="viewComplaints" class="container">
 
-    <table>
+    <table class="table">
         <thead>
 
         </thead>
@@ -94,19 +94,19 @@
                     <form (ngSubmit)="engineersDuty(complaint)">
 
                         <td><label for="ticketId">Ticket Id :</label><input type="text" id="ticketId" name="ticketId"
-                                value="{{complaint.ticketId}}" disabled> </td>
+                                value="{{complaint.ticketId}}"> </td>
 
                         <td><label for="customerEmail">Customer Email :</label><input type="text" name="customerEmail"
-                                value="{{complaint.customerEmail}}" id="customerEmail" disabled></td>
+                                value="{{complaint.customerEmail}}" id="customerEmail"></td>
 
                         <td><label for="complaint">Complaint :</label><input type="text" name="complaint"
-                                value='{{complaint.complaint}}' id="complaint" disabled></td>
+                                value='{{complaint.complaint}}' id="complaint"></td>
 
                         <td><label for="pincode">Pincode :</label><input type="text" name="pincode"
-                                value="{{complaint.pincode}}" id="pincode" disabled></td>
+                                value="{{complaint.pincode}}" id="pincode"></td>
 
                         <td><label for="status">Status :</label><input type="text" name="status"
-                                value="{{complaint.status}}" id="status" disabled></td>
+                                value="{{complaint.status}}" id="status"></td>
 
                         <td><button *ngIf="assignEngineersButton" (click)="assignEngineers()"
                                 class="btn btn-danger">Assign
