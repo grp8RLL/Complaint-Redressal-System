@@ -1,5 +1,4 @@
 <div class="row text-center text-black mb-3">
-
     <div class="col-lg-7 mx-auto">
         <h3>Engineer</h3>
     </div>
@@ -10,9 +9,6 @@
 
             <tr>
                 <th>
-                    <h4 style="text-align: center;">Register</h4>
-                </th>
-                <th>
                     <h4 style="text-align: center;">Login</h4>
                 </th>
             </tr>
@@ -20,30 +16,6 @@
         <br>
         <tbody>
             <tr>
-                <td>
-
-                    <div class="container">
-                        <form (ngSubmit)="registerEngineer()">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="engineerEmail"
-                                    [(ngModel)]="engineer.engineerEmail" placeholder="Enter email">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="engineerPassword"
-                                    [(ngModel)]="engineer.engineerPassword" placeholder="Enter password">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="engineerName"
-                                    [(ngModel)]="engineer.engineerName" placeholder="Enter name">
-                            </div>
-
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
-                        </form>
-                    </div>
-
-                </td>
                 <td>
 
                     <div class="container">
@@ -57,7 +29,9 @@
                                 <input type="password" class="form-control" name="engineerPassword"
                                     formControlName="engineerPassword" placeholder="Enter password">
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <p>For Creating an account click here?<button type="submit" class="btn btn-success"
+                                    routerLink="/engineerregister">Register</button></p>
                         </form>
 
                     </div>
@@ -92,16 +66,16 @@
                     <form (ngSubmit)="updateStatus(complaint)">
 
                         <td><label for="ticketId">Ticket Id :</label><input type="text" id="ticketId" name="ticketId"
-                                value="{{complaint.ticketId}}"> </td>
+                                value="{{complaint.ticketId}}" disabled> </td>
 
                         <td><label for="customerEmail">Customer Email :</label><input type="text" name="customerEmail"
-                                value="{{complaint.customerEmail}}" id="customerEmail"></td>
+                                value="{{complaint.customerEmail}}" id="customerEmail" disabled></td>
 
                         <td><label for="complaint">Complaint :</label><input type="text" name="complaint"
-                                value='{{complaint.complaint}}' id="complaint"></td>
+                                value='{{complaint.complaint}}' id="complaint" disabled></td>
 
                         <td><label for="pincode">Pincode :</label><input type="text" name="pincode"
-                                value="{{complaint.pincode}}" id="pincode"></td>
+                                value="{{complaint.pincode}}" id="pincode" disabled></td>
 
                         <td><label for="status">Status :</label><input type="text" name="status"
                                 value="{{complaint.status}}" id="status" (change)="newStatus($event)"></td>

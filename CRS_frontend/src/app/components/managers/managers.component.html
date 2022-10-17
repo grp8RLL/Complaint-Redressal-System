@@ -8,44 +8,14 @@
         <thead>
             <tr>
                 <th>
-                    <h4 style="text-align: center;">Register</h4>
+                    <h4 style="text-align: center;">LOGIN</h4>
                 </th>
-                <th>
-                    <h4 style="text-align: center;">Login</h4>
-                </th>
+
             </tr>
         </thead>
         <br>
         <tbody>
             <tr>
-                <td>
-                    <div class="container">
-                        <form (ngSubmit)="registerManager()">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="managerEmail"
-                                    [(ngModel)]="manager.managerEmail" placeholder="Enter email">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="password" class="form-control" name="managerPassword"
-                                    [(ngModel)]="manager.managerPassword" placeholder="Enter password">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="managerName"
-                                    [(ngModel)]="manager.managerName" placeholder="Enter name">
-                            </div>
-
-
-
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="managerPincode"
-                                    [(ngModel)]="manager.managerPincode" placeholder="Enter pincode">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                </td>
                 <td>
                     <div class="container">
                         <form [formGroup]="loginForm" (ngSubmit)="validateManager()">
@@ -59,6 +29,8 @@
                                     formControlName="managerPassword" placeholder="Enter password">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
+                            <p>For Creating an account click here? <button type="submit" class="btn btn-success"
+                                    routerLink="/managerregister">Register</button></p>
                         </form>
                     </div>
                 </td>
@@ -82,7 +54,7 @@
 
 <div *ngIf="viewComplaints" class="container">
 
-    <table class="table">
+    <table>
         <thead>
 
         </thead>
@@ -94,19 +66,19 @@
                     <form (ngSubmit)="engineersDuty(complaint)">
 
                         <td><label for="ticketId">Ticket Id :</label><input type="text" id="ticketId" name="ticketId"
-                                value="{{complaint.ticketId}}"> </td>
+                                value="{{complaint.ticketId}}" disabled> </td>
 
                         <td><label for="customerEmail">Customer Email :</label><input type="text" name="customerEmail"
-                                value="{{complaint.customerEmail}}" id="customerEmail"></td>
+                                value="{{complaint.customerEmail}}" id="customerEmail" disabled></td>
 
                         <td><label for="complaint">Complaint :</label><input type="text" name="complaint"
-                                value='{{complaint.complaint}}' id="complaint"></td>
+                                value='{{complaint.complaint}}' id="complaint" disabled></td>
 
                         <td><label for="pincode">Pincode :</label><input type="text" name="pincode"
-                                value="{{complaint.pincode}}" id="pincode"></td>
+                                value="{{complaint.pincode}}" id="pincode" disabled></td>
 
                         <td><label for="status">Status :</label><input type="text" name="status"
-                                value="{{complaint.status}}" id="status"></td>
+                                value="{{complaint.status}}" id="status" disabled></td>
 
                         <td><button *ngIf="assignEngineersButton" (click)="assignEngineers()"
                                 class="btn btn-danger">Assign

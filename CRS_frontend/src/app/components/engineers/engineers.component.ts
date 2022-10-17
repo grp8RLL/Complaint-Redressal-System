@@ -64,8 +64,6 @@ export class EngineersComponent implements OnInit {
   }
 
   getAllComplaintsByTicketIds() {
-    console.log('Inside engineers.components.ts --- ', this.ticketIds);
-
     this.viewComplaints = true;
     this._engineersService
       .getAllComplaintsByTicketIds(this.ticketIds)
