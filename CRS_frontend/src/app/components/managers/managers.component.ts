@@ -111,6 +111,7 @@ export class ManagersComponent implements OnInit {
   }
   engineerSelected(event: any) {
     //update the ui
+    alert(event.target.value);
     this.selectedEngineer = event.target.value;
   }
 }

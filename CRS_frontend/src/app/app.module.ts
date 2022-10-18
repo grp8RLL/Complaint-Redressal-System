@@ -14,6 +14,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ManagerregisterComponent } from './components/managerregister/managerregister.component';
 import { EngineerregisterComponent } from './components/engineerregister/engineerregister.component';
 import { CustomerregisterComponent } from './components/customerregister/customerregister.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 const routers: Routes = [
   { path: 'admin', component: AdminComponent },
@@ -50,6 +51,10 @@ const routers: Routes = [
     path: 'customerregister',
     component: CustomerregisterComponent,
   },
+  {
+    path: 'adminlogin',
+    component: AdminloginComponent,
+  },
 ];
 
 @NgModule({
@@ -64,6 +69,7 @@ const routers: Routes = [
     ManagerregisterComponent,
     EngineerregisterComponent,
     CustomerregisterComponent,
+    AdminloginComponent,
   ],
   imports: [
     RouterModule.forRoot(routers),

@@ -47,7 +47,7 @@ export class ManagersService {
       selectedEngineer: selectedEngineer,
     };
     console.log(this.statusUpdateDetails);
-
+alert(selectedEngineer);
     return this._httpClient.post(
       this.assignEngineersDutyUrl,
       this.statusUpdateDetails
