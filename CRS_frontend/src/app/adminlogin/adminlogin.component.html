@@ -1,57 +1,16 @@
 <body>
-  <div class="row" style="justify-content: center">
-    <div class="text-bold text-dark">
-      <h3>About Us</h3>
-    </div>
-    <div class="container w-75 border border-dark text-light">
-      <p>
-        • Toll Free Number for complaints : 198/ 1500 (from abc
-        numbers)1800-345-1500(other operator)
-      </p>
-      <p>• Complaint registration portal :Complaint Regitration System</p>
-      <p>
-        Login to CUSTOMER CARE PORTAL of "www.customer.co.in" or
-        "www.keralatelecom.com"
-      </p>
-      <p>
-        Click on CUSTOMER CARE - Enterprise Fault Management TROUBLE TICKET
-        Enter
-      </p>
-      <p>
-        USER NAME & PASSWORD (IT@SCH - For LP/UP Broadband) (IT@FTH - For FTTH
-        in
-      </p>
-      <p>
-        HS/HSS/VHSS & Offices, IT@HS - For Broadband in HS/ HSS/VHSS & Offices)
-      </p>
-    </div>
+  <div class="row" style="justify-content:center">
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
     <div class="container">
       <h1 style="color: rgb(12, 123, 86)">Admin Portal</h1>
-      <form
-        class="form-login"
-        (ngSubmit)="onSubmit(loginForm)"
-        #loginForm="ngForm"
-      >
+      <form class="form-login" (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
         <label for="inputUserName" class="sr-only">UserName</label>
-        <input
-          type="text"
-          id="inputUserName"
-          name="inputUserName"
-          class="form-control"
-          [ngClass]="{ 'is-invalid': submitted && inputUserName.errors }"
-          ngModel
-          placeholder="UserName"
-          required
-          autofocus
-          #inputUserName="ngModel"
-        />
+        <input type="text" id="inputUserName" name="inputUserName" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && inputUserName.errors }" ngModel placeholder="UserName" required
+          autofocus #inputUserName="ngModel" />
         <div *ngIf="submitted && inputUserName.errors" class="invalid-feedback">
           <!-- <span *ngIf="inputUserName.errors.required" 
           >Please enter a UserName</span
@@ -59,17 +18,9 @@
         </div>
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input
-          type="password"
-          id="inputPassword"
-          name="password"
-          class="form-control"
-          [ngClass]="{ 'is-invalid': submitted && password.errors }"
-          ngModel
-          placeholder="Password"
-          required
-          #password="ngModel"
-        />
+        <input type="password" id="inputPassword" name="password" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && password.errors }" ngModel placeholder="Password" required
+          #password="ngModel" />
         <div *ngIf="submitted && password.errors" class="invalid-feedback">
           <!-- <span *ngIf="password.errors.required">Please enter a Password</span> -->
         </div>
